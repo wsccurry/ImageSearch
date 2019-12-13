@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>
+    <body>
+        <div class="container">
+            <h1>内地明星图片搜素库</h1>
+            <h2>上传明星图片，即可获得该明星信息</h2>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="query_img"><br>
+                <input type="submit">
+            </form>
+            <h2>查询:</h2>
+            {% if query_path %}
+            <img src="{{ query_path }}" width="300px">
+            {% endif %}
+            <h2>你要查询的明星是：<a href="{{ result_url }}">{{ result_name }}</a></h2>
+            <h3>欧式距离：{{ result_dist }}</h3>
+        </div>
+    </body>
+</html>
+
+
